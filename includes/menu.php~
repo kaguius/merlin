@@ -1,0 +1,78 @@
+<?php
+	$userid = "";
+	$adminstatus = "";
+	session_start();
+	if (!empty($_SESSION)){
+		$userid = $_SESSION["userid"] ;
+		$adminstatus = $_SESSION["adminstatus"] ;
+		$station = $_SESSION["station"] ;
+	}
+	$filter_month = date("m");
+	$filter_year = date("Y");
+	$filter_day = date("d");
+	$day_one = 01;
+	
+	$start_date = $filter_year.'-'.$filter_month.'-'.$day_one;
+	$current_date = $filter_year.'-'.$filter_month.'-'.$filter_day;
+?>
+<div id="menu">
+	<ul>
+		<?php if($station == '4'){ ?>
+			<li><a href="index.php?view=daily">Home</a></li>
+			<li><a href="payments.php">Payments</a></li>
+			<li><a href="ptps.php">PTPs</a></li>
+			<li><a href="arrears.php">Arrears</a></li>
+			<li><a href="reports.php">Reports</a></li>
+			<li><a href="admin.php" title="Admin">Admin</a></li>
+			<li><a href="logout.php" title="Log Out">Log Out</a></li>
+		<? }
+		else if($station == '3'){ ?>
+			<li><a href="index.php?view=daily">Home</a></li>
+			<li><a href="leads.php">Leads</a></li>
+			<!--<li><a href="customers.php">Customers</a></li>-->
+			<li><a href="search.php">Search</a></li>
+			<li><a href="payments.php">Payments</a></li>
+			<li><a href="ptps.php">PTPs</a></li>
+			<li><a href="arrears.php">Arrears</a></li>
+			<li><a href="loan_suspense.php">Suspense</a>
+				<ul>
+					<li><a href="loan_suspense.php">Loan Suspense</a></li>
+					<li><a href="suspence_account.php">Payment Suspense</a></li>
+				</ul>
+			</li>
+			<!--<li><a href="#">Quality</a>
+				<ul>
+					<li><a href="field_qa.php">Field QA Form</a></li>
+					<li><a href="call_monitoring.php">Call Monitoring</a></li>
+				</ul>
+			</li>-->
+			<li><a href="reports.php">Reports</a></li>
+			<li><a href="loan_reversals.php">Reversals</a>
+				<ul>
+					<li><a href="loan_reversals.php">Loan Reversals</a></li>
+					<li><a href="payment_reversals.php">Payment Reversals</a></li>
+				</ul>
+			</li>
+			<li><a href="admin.php" title="Admin">Admin</a></li>
+			<li><a href="logout.php" title="Log Out">Log Out</a></li>
+		<? }
+		else{ ?>
+			<li><a href="index.php?view=daily">Home</a></li>
+			<li><a href="leads.php">Leads</a></li>
+			<li><a href="customers.php">Customers</a></li>
+			<li><a href="search.php">Search</a></li>
+			<li><a href="payments.php">Payments</a></li>
+			<li><a href="loan_suspense.php">Suspense</a>
+				<ul>
+					<li><a href="loan_suspense.php">Loan Suspense</a></li>
+					<li><a href="suspence_account.php">Payment Suspense</a></li>
+				</ul>
+			</li>
+			<li><a href="ptps.php">PTPs</a></li>
+			<li><a href="reports.php">Reports</a></li>
+			<li><a href="admin.php" title="Admin">Admin</a></li>
+			<li><a href="logout.php" title="Log Out">Log Out</a></li>
+		<? } ?>
+	</ul>
+	<br class="clearfix" />
+</div>

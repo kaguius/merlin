@@ -1,0 +1,23 @@
+<?php
+	
+	$msg_username = 'afbloans';
+	$msg_password = 'xlbCN1jq';
+	$msg_sender = 'AFBLOANS';
+	
+	$host_server='localhost';
+	$db_server='merlin';
+	$user_server='root';
+	$pwd_server='y4DtY8sA3XWfRv';
+	
+	$dbh1 = mysql_connect($host_server, $user_server, $pwd_server); 	
+	mysql_select_db($db_server, $dbh1);
+	
+	
+	//$conn = mysql_connect("localhost","root","kaguius");
+    //$conn1 = mysql_connect("197.232.245.225","kaguius","48Kaguius92%");
+    	
+    //mysql_select_db("afb",$conn);
+    //mysql_select_db("asterisk",$conn1);
+	
+	//date_default_timezone_set("Africa/Khartoum");
+?>

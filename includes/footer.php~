@@ -1,0 +1,11 @@
+<?php
+	$filter_month = date("m");
+	$filter_year = date("Y");
+	$filter_day = date("d");
+?>
+<div id="footer">
+	<p>Afb Loan Management Portal &copy; 2014 - <?php echo $filter_year ?>. Powered by <a href="http://www.zhen.co.ke" target="_blank">Zhen Technologies</a></p>
+	</div>
+</div>
+</body>
+</html>

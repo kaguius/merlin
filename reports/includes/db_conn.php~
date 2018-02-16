@@ -1,0 +1,30 @@
+<?php
+	
+	//$host='41.139.138.37';
+	//$db='siri';
+	//$user='tujenge_2';
+	//$pwd='48Kaguius92%';
+	
+	$msg_username = 'ZhenTech';
+	$msg_password = 'Zh3nT3ch$';
+	$msg_sender = 'AFBLOAN';
+	
+	$host='localhost';
+	$db='merlin';
+	$user='root';
+	$pwd='y4DtY8sA3XWfRv';
+	
+	if (mysql_connect($host,$user,$pwd))
+	{
+		if (!mysql_select_db($db))
+		{
+        		echo 'Database Error: ','Unable to select the specified database for use.';
+		}
+	}
+	else
+	{
+        	echo 'Database Error: ','Unable to connect to the database server.';
+	}
+
+	//date_default_timezone_set("Africa/Khartoum");
+?>
